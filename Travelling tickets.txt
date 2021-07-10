@@ -1,0 +1,111 @@
+package Travelling_Ticket;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import javax.swing.BoxLayout;
+import java.awt.Panel;
+import java.awt.Rectangle;
+import javax.swing.border.BevelBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JRadioButton;
+import javax.swing.JSeparator;
+
+public class Travelling {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Travelling window = new Travelling();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Travelling() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setFont(new Font("Tahoma", Font.BOLD, 17));
+		frame.setBounds(new Rectangle(0, 0, 10, 7));
+		frame.setBounds(0, 0, 1370, 700);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(0, 11, 1344, 63);
+		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Travelling Ticketing System");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 40));
+		lblNewLabel.setBounds(394, 0, 740, 52);
+		panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Ticket type");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 22));
+		lblNewLabel_1.setBounds(423, 95, 127, 23);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("Standard");
+		rdbtnNewRadioButton.setFont(new Font("Tahoma", Font.BOLD, 17));
+		rdbtnNewRadioButton.setBounds(286, 134, 109, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton);
+		
+		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Economy");
+		rdbtnNewRadioButton_1.setFont(new Font("Tahoma", Font.BOLD, 17));
+		rdbtnNewRadioButton_1.setBounds(286, 175, 109, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton_1);
+		
+		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("First Class");
+		rdbtnNewRadioButton_2.setFont(new Font("Tahoma", Font.BOLD, 17));
+		rdbtnNewRadioButton_2.setBounds(286, 217, 139, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton_2);
+		
+		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton("Single Ticket");
+		rdbtnNewRadioButton_3.setFont(new Font("Tahoma", Font.BOLD, 17));
+		rdbtnNewRadioButton_3.setBounds(420, 134, 139, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton_3);
+		
+		JRadioButton rdbtnNewRadioButton_4 = new JRadioButton("Return Ticket");
+		rdbtnNewRadioButton_4.setFont(new Font("Tahoma", Font.BOLD, 17));
+		rdbtnNewRadioButton_4.setBounds(420, 178, 139, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton_4);
+		
+		JRadioButton rdbtnNewRadioButton_6 = new JRadioButton("Adult");
+		rdbtnNewRadioButton_6.setFont(new Font("Tahoma", Font.BOLD, 17));
+		rdbtnNewRadioButton_6.setBounds(573, 134, 109, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton_6);
+		
+		JRadioButton rdbtnNewRadioButton_7 = new JRadioButton("Child");
+		rdbtnNewRadioButton_7.setFont(new Font("Tahoma", Font.BOLD, 17));
+		rdbtnNewRadioButton_7.setBounds(573, 178, 109, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton_7);
+		
+		JSeparator separator = new JSeparator();
+		separator.setFont(new Font("Dialog", Font.BOLD, 9));
+		separator.setBounds(679, 114, -388, 4);
+		frame.getContentPane().add(separator);
+	}
+}
